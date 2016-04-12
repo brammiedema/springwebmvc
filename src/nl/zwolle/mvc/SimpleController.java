@@ -26,7 +26,7 @@ public class SimpleController {
 	
 	@RequestMapping(value="/rest_args", method=RequestMethod.POST)
 	public String restArgs(@ModelAttribute("SpringWeb") Student student, Model model){
-		model.addAttribute("test", "ingevulde student man!" + student.getNaam());
+		model.addAttribute("test", "ingevulde student man!" + student.getNaam() + "  " + student.getAge());
 		return "hello";
 	}
 	 
